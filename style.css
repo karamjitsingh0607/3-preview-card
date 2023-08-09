@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+body,button{
+    font-family: 'Lexend Deca', sans-serif;
+}
+p{
+    font-weight: lighter;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background-color: var(--Very-light-gray-background-headings-buttons);
+}
+
+.card-container{
+    width: 800px;
+    height: 27em;
+    display: grid;
+    border-radius: 10px;
+    overflow: hidden;
+    grid-template-columns: repeat(3,1fr);
+    transition: all 0.3s ease;
+}
+.card-img{
+    width: 60px;
+    margin-bottom: 30px;
+}
+.card-heading{
+    font-family: 'Big Shoulders Display', cursive;
+    margin-bottom: 20px;
+    font-size: 2.1rem;
+}
+.card-para{
+    font-size: 0.85rem;
+}
+
+.card-btn{
+    background-color: transparent;
+    border: 2px solid var(--Very-light-gray-background-headings-buttons);
+    outline: none;
+    cursor: pointer;
+    padding: 14px 12px;
+    text-align: center;
+    border-radius: 50px;
+    color: var(--Very-light-gray-background-headings-buttons);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    color: var(--Very-light-gray-background-headings-buttons);
+}
+.card-1{
+    background-color: var(--Bright-orange);
+}
+.card-2{
+    background-color: var(--Dark-cyan);
+}
+.card-3{
+    background-color: var(--Very-dark-cyan);
+}
+
+@media screen and (max-width: 800px){
+    .card-container{
+        width: calc(100% - 40px);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .card-container{
+        width: 70vw;
+        height: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+    }
+    .card{
+        height: 25em;
+    }
+}
+@media screen and (max-width: 480px) {
+    .card-container{
+        width: 90vw;
+    }
+    .card{
+        padding: 30px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .card-container{
+        width: 95vw;
+    }
+}
